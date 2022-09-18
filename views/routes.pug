@@ -1,0 +1,107 @@
+extends base
+
+block routes
+	.routes
+		h2(class="routes__header") Authentication
+		.route
+			div
+				h3(class="route__method") POST
+				a(class="route__url", href="#") https://domain.com/api/users/signup
+			p(class="route__description")
+				| Use this route to create a new account. provide name, email, password &amp; passwordConfirm
+
+		.route
+			div
+				h3(class="route__method") POST
+				a(class="route__url", href="#") https://domain.com/api/users/login
+			p(class="route__description") Use this route to login. provide email &amp; password
+
+		.route
+			div
+				h3(class="route__method") GET
+				a(class="route__url", href="#") https://domain.com/api/users/logout
+			p(class="route__description")
+				span(class="route__protect") protected
+				| This route handles logout. you
+				| need to be logged in to use this route
+
+	.routes
+		h2(class="routes__header") Products
+		.route
+			div
+				h3(class="route__method") GET
+				a(class="route__url", href="#") https://domain.com/api/products
+			p(class="route__description") Use this route to get all the products.
+
+		.route
+			div
+				h3(class="route__method") POST
+				a(class="route__url", href="#") https://domain.com/api/products
+			p(class="route__description")
+				span(class="route__protect") protected
+				span(class="route__protect") admin
+				| Use this route to create/upload a product. only admin can make this request
+
+		.route
+			div
+				h3(class="route__method") GET
+				a(class="route__url", href="#") https://domain.com/api/products/:slug
+			p(class="route__description") Use this route to get a single product.
+
+		.route
+			div
+				h3(class="route__method") PATCH
+				a(class="route__url", href="#") https://domain.com/api/products/:id
+			p(class="route__description")
+				span(class="route__protect") protected
+				span(class="route__protect") admin
+				| Use this route to update a product. only admin can make this
+				| request
+
+		.route
+			div
+				h3(class="route__method") DELETE
+				a(class="route__url", href="#") https://domain.com/api/products/:id
+			p(class="route__description")
+				span(class="route__protect") protected
+				span(class="route__protect") admin
+				| Use this route to delete a product. only admin can make this
+				| request
+
+	.routes
+		h2(class="routes__header") Reviews
+		.route
+			div
+				h3(class="route__method") GET
+				a(class="route__url", href="#") https://domain.com/api/reviews
+			p(class="route__description") Use this route to get all the reviews.
+
+		.route
+			div
+				h3(class="route__method") POST
+				a(class="route__url", href="#") https://domain.com/api/reviews
+			p(class="route__description")
+				span(class="route__protect") protected
+				| Use this route to create a review. you need to be logged in to use this route
+
+		.route
+			div
+				h3(class="route__method") GET
+				a(class="route__url", href="#") https://domain.com/api/reviews/:id
+			p(class="route__description") Use this route to get a single review.
+
+		.route
+			div
+				h3(class="route__method") PATCH
+				a(class="route__url", href="#") https://domain.com/api/reviews/:id
+			p(class="route__description")
+				span(class="route__protect") protected
+				| Use this route to update a review. you need to be logged in to use this route
+
+		.route
+			div
+				h3(class="route__method") DELETE
+				a(class="route__url", href="#") https://domain.com/api/reviews/:id
+			p(class="route__description")
+				span(class="route__protect") protected
+				| Use this route to delete a review. you need to be logged in to use this route

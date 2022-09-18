@@ -1,0 +1,12 @@
+{
+  "name": "node-mvc",
+  "version": "1.0.0",
+  "description": "Node.js API structure with MVC pattern",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Saifur rahman Tanvir",
+  "license": "ISC"
+}
